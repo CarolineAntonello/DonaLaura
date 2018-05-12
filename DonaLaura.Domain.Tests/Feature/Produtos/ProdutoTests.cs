@@ -1,4 +1,4 @@
-﻿using DonaLaura.Domain.Features.Produto;
+﻿using DonaLaura.Domain.Features.Produtos;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -22,6 +22,7 @@ namespace DonaLaura.Domain.Tests.Feature.Produtos
         [Test]
         public void Domain_Produto_Nome_Vazio()
         {
+            _produto.Nome = "";
             Assert.Throws<NomeIsNullOrEmpty>(() => _produto.Validacao());
         }
 
@@ -61,7 +62,7 @@ namespace DonaLaura.Domain.Tests.Feature.Produtos
         }
 
         [Test]
-        public void Domain_Produto_Verificando_Todos_Campos()
+        public void Domain_Produto_Verificando_Todos_Corretos()
         {
             _produto.Nome = "Mouse";
             _produto.PrecoCusto = 30;

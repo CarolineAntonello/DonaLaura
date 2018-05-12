@@ -1,4 +1,4 @@
-﻿using DonaLaura.Domain.Features.Produto;
+﻿using DonaLaura.Domain.Features.Produtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;

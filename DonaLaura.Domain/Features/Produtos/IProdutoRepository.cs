@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DonaLaura.Domain.Features.Produto
+namespace DonaLaura.Domain.Features.Produtos
 {
     public interface IProdutoRepository
     {

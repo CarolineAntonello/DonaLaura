@@ -43,17 +43,19 @@
     <Compile Include="Exceptions\BusinessException.cs" />
     <Compile Include="Exceptions\IdentifierUndefinedException.cs" />
     <Compile Include="Exceptions\UnsupportedOperationException.cs" />
-    <Compile Include="Features\Produto\DataValidadeMenorDataFabricacao.cs" />
-    <Compile Include="Features\Produto\IProdutoRepository.cs" />
-    <Compile Include="Features\Produto\NomeIsNullOrEmpty.cs" />
-    <Compile Include="Features\Produto\NomeIsToLong.cs" />
-    <Compile Include="Features\Produto\NomeIsToShort.cs" />
-    <Compile Include="Features\Produto\PrecoCustoBaixo.cs" />
-    <Compile Include="Features\Produto\Produto.cs" />
+    <Compile Include="Features\Produtos\DataValidadeMenorDataFabricacao.cs" />
+    <Compile Include="Features\Produtos\IProdutoRepository.cs" />
+    <Compile Include="Features\Produtos\NomeIsNullOrEmpty.cs" />
+    <Compile Include="Features\Produtos\NomeIsToLong.cs" />
+    <Compile Include="Features\Produtos\NomeIsToShort.cs" />
+    <Compile Include="Features\Produtos\PrecoCustoBaixo.cs" />
+    <Compile Include="Features\Produtos\Produto.cs" />
+    <Compile Include="Features\Vendas\ClienteIsNullOrEmpty.cs" />
+    <Compile Include="Features\Vendas\ProdutoInvalido.cs" />
+    <Compile Include="Features\Vendas\QuantidadeMenorQueZero.cs" />
+    <Compile Include="Features\Vendas\Venda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Features\Venda\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
