@@ -10,8 +10,8 @@ namespace DonaLaura.Domain.Features.Produtos
     {
         Produto Save(Produto produto);
         void Update(Produto postproduto);
+        void Delete(Produto produto);
         Produto Get(long id);
         IEnumerable<Produto> GetAll();
-        void Delete(Produto produto);
     }
 }

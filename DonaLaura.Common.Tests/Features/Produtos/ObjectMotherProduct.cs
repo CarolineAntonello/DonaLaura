@@ -13,14 +13,68 @@ namespace DonaLaura.Common.Tests.Features.Produtos
         {
             Produto produto = new Produto()
             {
+                Id = 1,
                 Nome = "Teclado",
                 PrecoVenda = 150,
                 PrecoCusto = 100,
                 Diponibilidade = true,
-                DataFabricacao = DateTime.Now,
-                DataValidade = DateTime.Now.AddDays(1000),
+                DataFabricacao = DateTime.Now.AddMonths(-10),
+                DataValidade = DateTime.Now.AddDays(100),
             };
             return produto;
+        }
+
+        public static Produto GetProdutoSemNome()
+        {
+            Produto produto = new Produto()
+            {
+                Id = 1,
+                Nome = "",
+                PrecoVenda = 150,
+                PrecoCusto = 100,
+                Diponibilidade = true,
+                DataFabricacao = DateTime.Now.AddMonths(-10),
+                DataValidade = DateTime.Now.AddDays(100),
+            };
+            return produto;
+        }
+
+        public static IEnumerable<Produto> GetProdutos()
+        {
+            IEnumerable<Produto> produtos = new List<Produto>()
+            {
+                new Produto()
+                {
+                    Id = 1,
+                    Nome = "Xivits",
+                    PrecoVenda = 150,
+                    PrecoCusto = 100,
+                    Diponibilidade = true,
+                    DataFabricacao = DateTime.Now.AddMonths(-10),
+                    DataValidade = DateTime.Now.AddDays(100),
+                },
+                new Produto()
+                {
+                    Id = 2,
+                    Nome = "Vinizinho",
+                    PrecoVenda = 150,
+                    PrecoCusto = 100,
+                    Diponibilidade = true,
+                    DataFabricacao = DateTime.Now.AddMonths(-10),
+                    DataValidade = DateTime.Now.AddDays(100),
+                },
+                new Produto()
+                {
+                    Id = 3,
+                    Nome = "Carol",
+                    PrecoVenda = 150,
+                    PrecoCusto = 100,
+                    Diponibilidade = true,
+                    DataFabricacao = DateTime.Now.AddMonths(-10),
+                    DataValidade = DateTime.Now.AddDays(100),
+                }
+            };
+            return produtos;
         }
     }
 }
