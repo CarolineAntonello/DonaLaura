@@ -60,5 +60,17 @@ namespace DonaLaura.Domain.Tests.Feature.Produtos
             Assert.Throws<DataValidadeMenorDataFabricacao>(() => _produto.Validacao());
         }
 
+        [Test]
+        public void Domain_Produto_Verificando_Todos_Campos()
+        {
+            _produto.Nome = "Mouse";
+            _produto.PrecoCusto = 30;
+            _produto.PrecoVenda = 55;
+            _produto.Diponibilidade = true;
+            _produto.DataFabricacao = DateTime.Now.AddDays(-5);
+            _produto.DataValidade = DateTime.Now.AddMonths(10);
+            Assert.DoesNotThrow(_produto.Validacao);
+        }
+
     }
 }
