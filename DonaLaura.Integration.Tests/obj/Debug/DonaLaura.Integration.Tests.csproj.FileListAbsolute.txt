@@ -1,0 +1,5 @@
+C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura.Integration.Tests\bin\Debug\DonaLaura.Integration.Tests.dll
+C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura.Integration.Tests\bin\Debug\DonaLaura.Integration.Tests.pdb
+C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura.Integration.Tests\obj\Debug\DonaLaura.Integration.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura.Integration.Tests\obj\Debug\DonaLaura.Integration.Tests.dll
+C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura.Integration.Tests\obj\Debug\DonaLaura.Integration.Tests.pdb

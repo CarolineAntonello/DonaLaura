@@ -43,7 +43,12 @@
     <Compile Include="Exceptions\BusinessException.cs" />
     <Compile Include="Exceptions\IdentifierUndefinedException.cs" />
     <Compile Include="Exceptions\UnsupportedOperationException.cs" />
+    <Compile Include="Features\Produto\DataValidadeMenorDataFabricacao.cs" />
     <Compile Include="Features\Produto\IProdutoRepository.cs" />
+    <Compile Include="Features\Produto\NomeIsNullOrEmpty.cs" />
+    <Compile Include="Features\Produto\NomeIsToLong.cs" />
+    <Compile Include="Features\Produto\NomeIsToShort.cs" />
+    <Compile Include="Features\Produto\PrecoCustoBaixo.cs" />
     <Compile Include="Features\Produto\Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

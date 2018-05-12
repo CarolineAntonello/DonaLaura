@@ -10,7 +10,7 @@ namespace DonaLaura.Domain.Features.Produto
     {
         public long Id;
         public string Nome;
-        public double Precovenda;
+        public double PrecoVenda;
         public double PrecoCusto;
         public bool Diponibilidade;
         public DateTime DataFabricacao;
@@ -18,7 +18,20 @@ namespace DonaLaura.Domain.Features.Produto
 
         public void Validacao()
         {
+            if (string.IsNullOrEmpty(Nome))
+                throw new NomeIsNullOrEmpty();
 
+            if(Nome.Length < 4)
+                throw new NomeIsToShort();
+
+            if (Nome.Length > 25)
+                throw new NomeIsToLong();
+
+            if (PrecoCusto > PrecoVenda)
+                throw new PrecoCustoMaiorPrecoVenda();
+
+            if (DataValidade < DataFabricacao)
+                throw new DataValidadeMenorDataFabricacao();
         }
     }
 }

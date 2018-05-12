@@ -42,15 +42,18 @@
   <ItemGroup>
     <Compile Include="Base\ProdutoSqlTest.cs" />
     <Compile Include="Base\VendaSqlTest.cs" />
+    <Compile Include="Features\Produtos\ObjectMotherProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DbScript.sql" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Features\" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\DonaLaura.Domain\DonaLaura.Domain.csproj">
+      <Project>{12E8BA10-8ED3-4605-8B06-08AB28455F7A}</Project>
+      <Name>DonaLaura.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DonaLaura.Infra\DonaLaura.Infra.csproj">
       <Project>{4A845477-2FC2-4EF8-8B36-ED99CB5237C5}</Project>
       <Name>DonaLaura.Infra</Name>

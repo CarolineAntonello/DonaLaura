@@ -1,0 +1,6 @@
+C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura.Infra.Data.Tests\bin\Debug\DonaLaura.Infra.Data.Tests.dll.config
+C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura.Infra.Data.Tests\bin\Debug\DonaLaura.Infra.Data.Tests.dll
+C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura.Infra.Data.Tests\bin\Debug\DonaLaura.Infra.Data.Tests.pdb
+C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura.Infra.Data.Tests\obj\Debug\DonaLaura.Infra.Data.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura.Infra.Data.Tests\obj\Debug\DonaLaura.Infra.Data.Tests.dll
+C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura.Infra.Data.Tests\obj\Debug\DonaLaura.Infra.Data.Tests.pdb
