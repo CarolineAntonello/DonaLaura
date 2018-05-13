@@ -66,6 +66,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\DonaLaura.Common.Tests\DonaLaura.Common.Tests.csproj">
+      <Project>{68AD556F-A8C4-49A6-A65B-F23E5B9567FE}</Project>
+      <Name>DonaLaura.Common.Tests</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DonaLaura.DataBase\DonaLaura.DataBase.sqlproj">
       <Project>{0adeb2be-958a-4f94-80cc-fdc71585f2dc}</Project>
       <Name>DonaLaura.DataBase</Name>
