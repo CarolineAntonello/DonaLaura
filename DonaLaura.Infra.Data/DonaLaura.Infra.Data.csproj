@@ -40,10 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Features\Produto\ProdutoSqlRepository.cs" />
-    <Compile Include="Features\Venda\VendaSqlRepository.cs" />
+    <Compile Include="Features\Produtos\ProdutoSqlRepository.cs" />
+    <Compile Include="Features\Vendas\VendaSqlRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DonaLaura.Domain\DonaLaura.Domain.csproj">
+      <Project>{12E8BA10-8ED3-4605-8B06-08AB28455F7A}</Project>
+      <Name>DonaLaura.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

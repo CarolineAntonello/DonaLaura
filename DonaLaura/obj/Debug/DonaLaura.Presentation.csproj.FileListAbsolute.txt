@@ -1,9 +1,0 @@
-C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura\bin\Debug\DonaLaura.exe.config
-C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura\bin\Debug\DonaLaura.exe
-C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura\bin\Debug\DonaLaura.pdb
-C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura\obj\Debug\DonaLaura.Presentation.csprojResolveAssemblyReference.cache
-C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura\obj\Debug\DonaLaura.Properties.Resources.resources
-C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura\obj\Debug\DonaLaura.Presentation.csproj.GenerateResource.cache
-C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura\obj\Debug\DonaLaura.Presentation.csproj.CoreCompileInputs.cache
-C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura\obj\Debug\DonaLaura.exe
-C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura\obj\Debug\DonaLaura.pdb

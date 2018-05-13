@@ -2,7 +2,7 @@
 GO
 USE [TBDonaLaura]
 GO
-CREATE TABLE [dbo].[Produto](
+CREATE TABLE [dbo].[TBProduto](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Nome] [varchar](140)  NOT NULL,
 	[PrecoVenda] [decimal] NOT NULL,

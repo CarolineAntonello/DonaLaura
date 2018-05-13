@@ -1,6 +1,0 @@
-C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura.Infra\bin\Debug\DonaLaura.Infra.dll
-C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura.Infra\bin\Debug\DonaLaura.Infra.pdb
-C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura.Infra\obj\Debug\DonaLaura.Infra.csprojResolveAssemblyReference.cache
-C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura.Infra\obj\Debug\DonaLaura.Infra.csproj.CoreCompileInputs.cache
-C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura.Infra\obj\Debug\DonaLaura.Infra.dll
-C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura.Infra\obj\Debug\DonaLaura.Infra.pdb
