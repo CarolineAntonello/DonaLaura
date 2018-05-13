@@ -3,3 +3,4 @@ C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaL
 C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura.DataBase\bin\Debug\DonaLaura.DataBase.pdb
 C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura.DataBase\obj\Debug\DonaLaura.DataBase.dll
 C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura.DataBase\obj\Debug\DonaLaura.DataBase.pdb
+C:\Users\Caroline Antonello\Desktop\Academia Programador\Projetos\Reforço\DonaLaura\DonaLaura.DataBase\obj\Debug\DonaLaura.DataBase.sqlprojResolveAssemblyReference.cache

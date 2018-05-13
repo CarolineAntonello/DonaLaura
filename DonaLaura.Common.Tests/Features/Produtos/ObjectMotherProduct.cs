@@ -46,7 +46,7 @@ namespace DonaLaura.Common.Tests.Features.Produtos
                 new Produto()
                 {
                     Id = 1,
-                    Nome = "Xivits",
+                    Nome = "Monitor",
                     PrecoVenda = 150,
                     PrecoCusto = 100,
                     Diponibilidade = true,
@@ -56,7 +56,7 @@ namespace DonaLaura.Common.Tests.Features.Produtos
                 new Produto()
                 {
                     Id = 2,
-                    Nome = "Vinizinho",
+                    Nome = "MousePad",
                     PrecoVenda = 150,
                     PrecoCusto = 100,
                     Diponibilidade = true,
@@ -66,7 +66,7 @@ namespace DonaLaura.Common.Tests.Features.Produtos
                 new Produto()
                 {
                     Id = 3,
-                    Nome = "Carol",
+                    Nome = "HadSet",
                     PrecoVenda = 150,
                     PrecoCusto = 100,
                     Diponibilidade = true,

@@ -11,7 +11,7 @@ namespace DonaLaura.Domain.Features.Vendas
     public class Venda
     {
         Produto produto = new Produto();
-        
+        public long Id;
         public long ProdutoId;
         public string Cliente;
         public int Quantidade;

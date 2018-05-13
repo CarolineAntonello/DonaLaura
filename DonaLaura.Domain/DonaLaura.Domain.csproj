@@ -51,6 +51,7 @@
     <Compile Include="Features\Produtos\PrecoCustoBaixo.cs" />
     <Compile Include="Features\Produtos\Produto.cs" />
     <Compile Include="Features\Vendas\ClienteIsNullOrEmpty.cs" />
+    <Compile Include="Features\Vendas\IVendaRepository.cs" />
     <Compile Include="Features\Vendas\ProdutoInvalido.cs" />
     <Compile Include="Features\Vendas\QuantidadeMenorQueZero.cs" />
     <Compile Include="Features\Vendas\Venda.cs" />

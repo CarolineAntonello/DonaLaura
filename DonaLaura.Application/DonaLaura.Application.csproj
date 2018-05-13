@@ -42,11 +42,11 @@
   <ItemGroup>
     <Compile Include="Features\Produtos\IProdutoService.cs" />
     <Compile Include="Features\Produtos\ProdutoService.cs" />
+    <Compile Include="Features\Vendas\IVendaService.cs" />
+    <Compile Include="Features\Vendas\VendaService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Features\Vendas\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DonaLaura.Domain\DonaLaura.Domain.csproj">
       <Project>{12E8BA10-8ED3-4605-8B06-08AB28455F7A}</Project>

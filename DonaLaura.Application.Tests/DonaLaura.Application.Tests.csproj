@@ -64,11 +64,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Features\ProdutoServiceTests\ProdutoServiceTest.cs" />
+    <Compile Include="Features\VendaServiceTests\VendaServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Features\VendaServiceTests\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

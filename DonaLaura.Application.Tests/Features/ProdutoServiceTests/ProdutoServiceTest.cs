@@ -68,7 +68,7 @@ namespace DonaLaura.Application.Tests.Features.ProdutoServiceTests
         }
 
         [Test]
-        public void PostService_Delete_ShouldBeOk()
+        public void ProdutoService_Delete_ShouldBeOk()
         {
             _produto = ObjectMotherProduct.GetProduto();
             _produtoRepository.Setup(x => x.Delete(_produto));
@@ -87,7 +87,7 @@ namespace DonaLaura.Application.Tests.Features.ProdutoServiceTests
         }
 
         [Test]
-        public void PostService_GetAll_ShouldBeOk()
+        public void ProdutoService_GetAll_ShouldBeOk()
         {
             _produtos = ObjectMotherProduct.GetProdutos();
             _produtoRepository.Setup(x => x.GetAll()).Returns(_produtos);
