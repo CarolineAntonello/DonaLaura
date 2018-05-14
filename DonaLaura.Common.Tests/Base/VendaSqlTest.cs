@@ -9,13 +9,15 @@ namespace DonaLaura.Common.Tests.Base
 {
     public static class VendaSqlTest
     {
-        private const string RECREATE_POST_TABLE = "TRUNCATE TABLE [dbo].[Venda] ";
-        private const string INSERT_POST = "INSERT INTO Posts(ProdutoId,Cliente,Quantidade,Lucro) VALUES (1,'Carol',1,500)";
+        private const string RECREATE_VENDA_TABLE = "DELETE FROM [dbo].[TBVenda]; ";
+        private const string EXCLUINDO_LIGAÇÃO = "DBCC CHECKIDENT('TBVenda', RESEED, 0);";
+        private const string INSERT_VENDA = "INSERT INTO TBVenda(ProdutoId,Cliente,Quantidade,Lucro) VALUES (1,'Caroline',1,500)";
 
         public static void SeedDatabase()
         {
-            Db.Update(RECREATE_POST_TABLE);
-            Db.Update(INSERT_POST);
+            Db.Update(RECREATE_VENDA_TABLE);
+            Db.Update(EXCLUINDO_LIGAÇÃO);
+            Db.Update(INSERT_VENDA);
         }
     }
 }
