@@ -49,6 +49,10 @@
       <Project>{12E8BA10-8ED3-4605-8B06-08AB28455F7A}</Project>
       <Name>DonaLaura.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DonaLaura.Infra\DonaLaura.Infra.csproj">
+      <Project>{4a845477-2fc2-4ef8-8b36-ed99cb5237c5}</Project>
+      <Name>DonaLaura.Infra</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
