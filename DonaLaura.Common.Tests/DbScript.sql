@@ -1,6 +1,6 @@
 ﻿CREATE DATABASE DBDonaLaura;
 GO
-USE [TBDonaLaura]
+USE [DBDonaLaura]
 GO
 CREATE TABLE [dbo].[TBProduto](
 	[Id] [int] IDENTITY(1,1) NOT NULL,

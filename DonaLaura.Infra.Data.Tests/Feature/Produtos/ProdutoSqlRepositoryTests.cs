@@ -19,7 +19,7 @@ namespace DonaLaura.Infra.Data.Tests.Feature.Produtos
         [SetUp]
         public void Initilaze()
         {
-            ProdutoSqlTest.SeedDatabase();
+            //ProdutoSqlTest.SeedDatabase();
             _repository = new ProdutoSqlRepository();
         }
 

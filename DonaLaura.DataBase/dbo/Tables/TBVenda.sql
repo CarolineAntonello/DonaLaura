@@ -4,6 +4,6 @@
     [ProdutoId] INT NOT NULL, 
     [Cliente] NVARCHAR(50) NOT NULL, 
     [Quantidade] INT NOT NULL, 
-    [Lucro] DECIMAL(18, 2) NOT NULL, 
+    [Lucro] DECIMAL NOT NULL, 
     CONSTRAINT [FK_TBVenda_ToTable] FOREIGN KEY (ProdutoId) REFERENCES [TBProduto](Id)
 )

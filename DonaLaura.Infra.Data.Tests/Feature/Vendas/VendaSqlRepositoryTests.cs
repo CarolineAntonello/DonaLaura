@@ -21,7 +21,7 @@ namespace DonaLaura.Infra.Data.Tests.Feature.Vendas
         [SetUp]
         public void Initilaze()
         {
-            VendaSqlTest.SeedDatabase();
+            //VendaSqlTest.SeedDatabase();
             _repository = new VendaSqlRepository();
         }
 
