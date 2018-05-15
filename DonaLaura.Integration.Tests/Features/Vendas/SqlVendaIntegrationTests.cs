@@ -78,12 +78,12 @@ namespace DonaLaura.Integration.Tests.Features.Vendas
             venda.Id.Should().BeGreaterThan(0);
         }
 
-        [Test]
-        public void Integration_GetSale_ShouldBeFail()
-        {
-             Venda venda = _service.Get(2);
-            venda.Should().BeNull();
-        }
+        //[Test]
+        //public void Integration_GetSale_ShouldBeFail()
+        //{
+        //     Venda venda = _service.Get(2);
+        //    venda.Should().BeNull();
+        //}
 
         [Test]
         public void Integration_GetAllSale_ShouldBeOkay()

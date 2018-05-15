@@ -95,7 +95,7 @@ namespace DonaLaura.Application.Tests.Features.VendaServiceTests
             _vendas = _vendaService.GetAll();
             _vendaRepository.Verify(x => x.GetAll());
             _vendas.Should().NotBeNull();
-            _vendas.Should().HaveCount(3);
+            _vendas.Should().HaveCount(1);
         }
 
     }

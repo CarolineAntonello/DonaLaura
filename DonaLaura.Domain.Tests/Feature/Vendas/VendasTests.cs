@@ -1,5 +1,6 @@
 ﻿using DonaLaura.Domain.Features.Produtos;
 using DonaLaura.Domain.Features.Vendas;
+using FluentAssertions;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -44,7 +45,6 @@ namespace DonaLaura.Domain.Tests.Feature.Vendas
             _venda.ProdutoId = Convert.ToInt32(_produto.Disponibilidade = false);
             _venda.Cliente = "Vinícius";
             _venda.Quantidade = 1;
-            //_venda.ProdutoId = Convert.ToInt32(_produto.DataFabricacao = DateTime.Now.AddDays(-10));
             Assert.Throws<ProdutoInvalido>(() => _venda.Validacao());
         }
 
@@ -53,11 +53,34 @@ namespace DonaLaura.Domain.Tests.Feature.Vendas
         {
             _venda.ProdutoId = 12;
             _venda.ProdutoId = Convert.ToInt32(_produto.Disponibilidade = true);
-            //_venda.ProdutoId = Convert.ToInt32(_produto.DataValidade = DateTime.Now.AddDays(10));
             _venda.Cliente = "Vinícius";
             _venda.Quantidade = 1;
             _venda.Lucro = 15;
             Assert.DoesNotThrow(_venda.Validacao);
+        }
+
+        [Test]
+        public void Domain_Venda_CalculaLucro_Deveria_Calcular_Lucro_Corretamente()
+        {
+            Produto prod = new Produto()
+            {
+                Nome = "test",
+                Disponibilidade = true,
+                DataValidade = DateTime.Now.AddDays(50),
+                PrecoCusto = 10,
+                PrecoVenda = 20,
+            };
+            Venda venda = new Venda()
+            {
+                Id = 1,
+                Cliente = "teste",
+                ProdutoId = 1,
+                Quantidade = 1,
+                produto = prod,
+            };
+            _venda.CalculaLucro();
+            _venda.Lucro.Should().NotBe(1);
+            //_venda.Lucro.Should().Be(10);
         }
     }
 }
