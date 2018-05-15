@@ -19,20 +19,21 @@ namespace DonaLaura.Infra.Data.Tests.Feature.Produtos
         [SetUp]
         public void Initilaze()
         {
-            //ProdutoSqlTest.SeedDatabase();
+            BaseSqlTest.SeedDeleteDatabase();
+            BaseSqlTest.SeedInsertDatabase();
             _repository = new ProdutoSqlRepository();
         }
 
         [Test]
-        public void ProdutoSql_Save_ShouldBeOk()
+        public void ProductSql_Save_ShouldBeOk()
         {
-            _produto = ObjectMotherProduct.GetProduto();
+            _produto = ObjectMotherProduct.GetProdutoSemId();
             _produto = _repository.Save(_produto);
             _produto.Id.Should().BeGreaterThan(0);
         }
 
         [Test]
-        public void PostSql_Save_ShouldBefail()
+        public void ProductSql_Save_ShouldBefail()
         {
             _produto = ObjectMotherProduct.GetProdutoSemNome();
             Action action = () => _repository.Save(_produto);
@@ -40,24 +41,24 @@ namespace DonaLaura.Infra.Data.Tests.Feature.Produtos
         }
 
         [Test]
-        public void PostSql_Update_ShouldBeOk()
+        public void ProductSql_Update_ShouldBeOk()
         {
             _produto = ObjectMotherProduct.GetProduto();
             _repository.Update(_produto);
             Produto p = _repository.Get(_produto.Id);
-            _produto.Nome.Should().Be(p.Nome);
+            _produto.Nome.Should().Be("Teclado");
         }
 
         [Test]
-        public void PostSql_Update_ShouldBeFail()
+        public void ProductSql_Update_ShouldBeFail()
         {
             _produto = ObjectMotherProduct.GetProdutoSemNome();
             Action action = () => _repository.Update(_produto);
             action.Should().Throw<NomeIsNullOrEmpty>();
         }
 
-        [Test]
-        public void PostSql_Delete_ShouldBeOk()
+        [Test]//conflito
+        public void ProductSql_Delete_ShouldBeOk()
         {
             _produto = ObjectMotherProduct.GetProduto();
             _repository.Delete(_produto);
@@ -66,7 +67,7 @@ namespace DonaLaura.Infra.Data.Tests.Feature.Produtos
         }
 
         [Test]
-        public void PostSql_GetAll_ShouldBeOk()
+        public void ProductSql_GetAll_ShouldBeOk()
         {
             IEnumerable<Produto> posts = ObjectMotherProduct.GetProdutos();
             foreach (var post in posts)
@@ -74,7 +75,7 @@ namespace DonaLaura.Infra.Data.Tests.Feature.Produtos
                 _repository.Save(post);
             }
             IEnumerable<Produto> p = _repository.GetAll();
-            p.Count().Should().Be(3);
+            p.Count().Should().Be(4);
         }
     }
 }

@@ -11,11 +11,48 @@ namespace DonaLaura.Infra.Data.Features.Produtos
 {
     public class ProdutoSqlRepository : IProdutoRepository
     {
-        private string _sqlAdd = "insert into TBProduto(Nome,PrecoVenda,PrecoCusto,Disponibilidade,DataFabricacao,DataValidade) values (@Nome, @PrecoVenda, @PrecoCusto. @Disponibilidade, @DataFabricacao, @DataValidade)";
-        private string _sqlUpdate = "update TBProduto set Nome = @Nome, PrecoVenda = @PrecoVenda, PrecoCusto = @PrecoCusto, Disponibilidade = @Disponibilidade, DataFabricacao = @DataFabricacao, DataValidade = @DataValidade where Id = @Id";
-        private string _sqlGetById = "select *from TBProduto where Id = @Id";
-        private string _sqlDelete = "delete from TBProduto where Id = @Id";
-        private string _sqlGetAll = "select * from TBProduto";
+        private string _sqlAdd = @"INSERT INTO 
+                                    TBProduto
+                                    (Nome,
+                                    PrecoVenda,
+                                    PrecoCusto,
+                                    Disponibilidade,
+                                    DataFabricacao,
+                                    DataValidade) 
+                                    VALUES 
+                                    (@Nome, 
+                                    @PrecoVenda,
+                                    @PrecoCusto, 
+                                    @Disponibilidade, 
+                                    @DataFabricacao, 
+                                    @DataValidade)";
+
+        private string _sqlUpdate = @"UPDATE 
+                                    TBProduto 
+                                    SET 
+                                    Nome = @Nome, 
+                                    PrecoVenda = @PrecoVenda, 
+                                    PrecoCusto = @PrecoCusto, 
+                                    Disponibilidade = @Disponibilidade, 
+                                    DataFabricacao = @DataFabricacao, 
+                                    DataValidade = @DataValidade 
+                                    where Id = @Id";
+
+        private string _sqlGetById = @"select *from TBProduto where Id = @Id";
+
+        private string _sqlDelete = @"DELETE FROM TBProduto
+                                    WHERE Id = @Id";
+
+        private string _sqlGetAll = @"SELECT 
+                                    Id,
+                                    Nome, 
+                                    PrecoVenda, 
+                                    PrecoCusto, 
+                                    Disponibilidade, 
+                                    DataFabricacao, 
+                                    DataValidade
+                                    FROM
+                                    TBProduto";
 
         public Produto Save(Produto produto)
         {
@@ -53,11 +90,12 @@ namespace DonaLaura.Infra.Data.Features.Produtos
            new Produto
            {
                Id = Convert.ToInt64(reader["Id"]),
-               Nome = reader["Nome"].ToString(),
-               PrecoCusto = Convert.ToInt64(reader["PrecoCusto"]),
-               Diponibilidade = Convert.ToBoolean(reader["Diponibilidade"]),
-               DataFabricacao = Convert.ToDateTime(reader["DataFabricacao"]),
-               DataValidade = Convert.ToDateTime(reader["DataValidade"])
+               //Nome = reader["Nome"].ToString(),
+               //PrecoCusto = Convert.ToInt64(reader["PrecoCusto"]),
+               //PrecoVenda = Convert.ToInt64(reader["PrecoVenda"]),
+               //Disponibilidade = Convert.ToBoolean(reader["Disponibilidade"]),
+               //DataFabricacao = Convert.ToDateTime(reader["DataFabricacao"]),
+               //DataValidade = Convert.ToDateTime(reader["DataValidade"])
            };
 
         /// <summary>
@@ -71,7 +109,8 @@ namespace DonaLaura.Infra.Data.Features.Produtos
             {
                 "@Id", produto.Id,
                 "@Nome", produto.Nome,
-                "@Diponibilidade", produto.Diponibilidade,
+                "@PrecoVenda", produto.PrecoVenda,
+                "@Disponibilidade", produto.Disponibilidade,
                 "@PrecoCusto", produto.PrecoCusto,
                 "@DataFabricacao", produto.DataFabricacao,
                 "@DataValidade", produto.DataValidade

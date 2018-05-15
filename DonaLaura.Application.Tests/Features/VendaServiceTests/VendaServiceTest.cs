@@ -69,7 +69,7 @@ namespace DonaLaura.Application.Tests.Features.VendaServiceTests
         }
 
         [Test]
-        public void PostService_Delete_ShouldBeOk()
+        public void VendaService_Delete_ShouldBeOk()
         {
             _venda = ObjectMotherSale.GetVenda();
             _vendaRepository.Setup(x => x.Delete(_venda));
@@ -88,7 +88,7 @@ namespace DonaLaura.Application.Tests.Features.VendaServiceTests
         }
 
         [Test]
-        public void PostService_GetAll_ShouldBeOk()
+        public void VendaService_GetAll_ShouldBeOk()
         {
             _vendas = ObjectMotherSale.GetVendas();
             _vendaRepository.Setup(x => x.GetAll()).Returns(_vendas);

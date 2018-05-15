@@ -26,9 +26,14 @@ namespace DonaLaura.Domain.Features.Vendas
             if (Quantidade <= 0)
                 throw new QuantidadeMenorQueZero();
 
-            if (ProdutoId <= 0 && produto.Diponibilidade == false && produto.DataValidade < DateTime.Now)
+            if (ProdutoId <= 0 && produto.Disponibilidade == false && produto.DataValidade < DateTime.Now)
                 throw new ProdutoInvalido();
 
+        }
+
+        public void CalculaLucro()
+        {
+            Lucro = produto.PrecoVenda - produto.PrecoCusto;
         }
 
     }

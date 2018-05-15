@@ -9,7 +9,7 @@ namespace DonaLaura.Domain.Features.Produtos
     public interface IProdutoRepository
     {
         Produto Save(Produto produto);
-        void Update(Produto postproduto);
+        void Update(Produto produto);
         void Delete(Produto produto);
         Produto Get(long id);
         IEnumerable<Produto> GetAll();

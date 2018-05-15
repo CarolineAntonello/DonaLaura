@@ -22,13 +22,14 @@ namespace DonaLaura.Integration.Tests.Features.Produtos
         [SetUp]
         public void Initilaze()
         {
-            ProdutoSqlTest.SeedDatabase();
+            BaseSqlTest.SeedDeleteDatabase();
+            BaseSqlTest.SeedInsertDatabase();
             _repository = new ProdutoSqlRepository();
             _service = new ProdutoService(_repository);
         }
 
         [Test]
-        public void Integration_AddPost_ShouldBeOK()
+        public void Integration_AddProduct_ShouldBeOK()
         {
             Produto produto = ObjectMotherProduct.GetProduto();
             Produto produtoReceived = _service.Add(produto);
@@ -38,7 +39,7 @@ namespace DonaLaura.Integration.Tests.Features.Produtos
         }
 
         [Test]
-        public void Integration_AddPost_ShouldBeFail()
+        public void Integration_AddProduct_ShouldBeFail()
         {
             Produto produto = ObjectMotherProduct.GetProdutoSemNome();
             Action action = () => _service.Add(produto);
@@ -46,7 +47,7 @@ namespace DonaLaura.Integration.Tests.Features.Produtos
         }
 
         [Test]
-        public void Integration_UpdatePost_ShouldBeOK()
+        public void Integration_UpdateProduct_ShouldBeOK()
         {
             Produto produto = ObjectMotherProduct.GetProduto();
             _service.Update(produto);
@@ -55,7 +56,7 @@ namespace DonaLaura.Integration.Tests.Features.Produtos
         }
 
         [Test]
-        public void Integration_UpdatePost_ShouldBeFail()
+        public void Integration_UpdateProduct_ShouldBeFail()
         {
             Produto produto = ObjectMotherProduct.GetProdutoSemNome();
             Action action = () => _service.Add(produto);
@@ -63,7 +64,7 @@ namespace DonaLaura.Integration.Tests.Features.Produtos
         }
 
         [Test]
-        public void Integration_DeletePost_ShouldBeOK()
+        public void Integration_DeleteProduct_ShouldBeOK()
         {
             Produto produto = ObjectMotherProduct.GetProduto();
             _service.Delete(produto);
@@ -72,7 +73,7 @@ namespace DonaLaura.Integration.Tests.Features.Produtos
         }
 
         [Test]
-        public void Integration_GetPost_ShouldBeOK()
+        public void Integration_GetProduct_ShouldBeOK()
         {
             Produto produto = _service.Get(1);
             produto.Should().NotBeNull();
@@ -80,14 +81,14 @@ namespace DonaLaura.Integration.Tests.Features.Produtos
         }
 
         [Test]
-        public void Integration_GetPost_ShouldBeFail()
+        public void Integration_GetProduct_ShouldBeFail()
         {
-            Produto produto = _service.Get(2);
+            Produto produto = _service.Get(200);
             produto.Should().BeNull();
         }
 
         [Test]
-        public void Integration_GetAllPost_ShouldBeOkay()
+        public void Integration_GetAllProducts_ShouldBeOkay()
         {
             IEnumerable<Produto> produto = _service.GetAll();
             produto.Count().Should().BeGreaterThan(0);

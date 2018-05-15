@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\BaseSqlTest.cs" />
     <Compile Include="Base\ProdutoSqlTest.cs" />
     <Compile Include="Base\VendaSqlTest.cs" />
     <Compile Include="Features\Produtos\ObjectMotherProduct.cs" />

@@ -9,6 +9,20 @@ namespace DonaLaura.Common.Tests.Features.Produtos
 {
     public static partial class ObjectMotherProduct
     {
+        public static Produto GetProdutoSemId()
+        {
+            Produto produto = new Produto()
+            {
+                Nome = "Teclado",
+                PrecoVenda = 150,
+                PrecoCusto = 100,
+                Disponibilidade = true,
+                DataFabricacao = DateTime.Now.AddMonths(-10),
+                DataValidade = DateTime.Now.AddDays(100),
+            };
+            return produto;
+        }
+
         public static Produto GetProduto()
         {
             Produto produto = new Produto()
@@ -17,7 +31,7 @@ namespace DonaLaura.Common.Tests.Features.Produtos
                 Nome = "Teclado",
                 PrecoVenda = 150,
                 PrecoCusto = 100,
-                Diponibilidade = true,
+                Disponibilidade = true,
                 DataFabricacao = DateTime.Now.AddMonths(-10),
                 DataValidade = DateTime.Now.AddDays(100),
             };
@@ -32,7 +46,7 @@ namespace DonaLaura.Common.Tests.Features.Produtos
                 Nome = "",
                 PrecoVenda = 150,
                 PrecoCusto = 100,
-                Diponibilidade = true,
+                Disponibilidade = true,
                 DataFabricacao = DateTime.Now.AddMonths(-10),
                 DataValidade = DateTime.Now.AddDays(100),
             };
@@ -49,7 +63,7 @@ namespace DonaLaura.Common.Tests.Features.Produtos
                     Nome = "Monitor",
                     PrecoVenda = 150,
                     PrecoCusto = 100,
-                    Diponibilidade = true,
+                    Disponibilidade = true,
                     DataFabricacao = DateTime.Now.AddMonths(-10),
                     DataValidade = DateTime.Now.AddDays(100),
                 },
@@ -59,7 +73,7 @@ namespace DonaLaura.Common.Tests.Features.Produtos
                     Nome = "MousePad",
                     PrecoVenda = 150,
                     PrecoCusto = 100,
-                    Diponibilidade = true,
+                    Disponibilidade = true,
                     DataFabricacao = DateTime.Now.AddMonths(-10),
                     DataValidade = DateTime.Now.AddDays(100),
                 },
@@ -69,7 +83,7 @@ namespace DonaLaura.Common.Tests.Features.Produtos
                     Nome = "HadSet",
                     PrecoVenda = 150,
                     PrecoCusto = 100,
-                    Diponibilidade = true,
+                    Disponibilidade = true,
                     DataFabricacao = DateTime.Now.AddMonths(-10),
                     DataValidade = DateTime.Now.AddDays(100),
                 }

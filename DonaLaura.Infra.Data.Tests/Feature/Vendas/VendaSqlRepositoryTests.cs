@@ -21,20 +21,21 @@ namespace DonaLaura.Infra.Data.Tests.Feature.Vendas
         [SetUp]
         public void Initilaze()
         {
-            //VendaSqlTest.SeedDatabase();
+            BaseSqlTest.SeedDeleteDatabase();
+            BaseSqlTest.SeedInsertDatabase();
             _repository = new VendaSqlRepository();
         }
 
         [Test]
-        public void VendaSql_Save_ShouldBeOk()
+        public void SaleSql_Save_ShouldBeOk()
         {
-            _venda = ObjectMotherSale.GetVenda();
+            _venda = ObjectMotherSale.GetVendaSemId();
             _venda = _repository.Save(_venda);
             _venda.Id.Should().BeGreaterThan(0);
         }
 
         [Test]
-        public void PostSql_Save_ShouldBefail()
+        public void SaleSql_Save_ShouldBefail()
         {
             _venda = ObjectMotherSale.GetVendasSemCliente();
             Action action = () => _repository.Save(_venda);
@@ -42,7 +43,7 @@ namespace DonaLaura.Infra.Data.Tests.Feature.Vendas
         }
 
         [Test]
-        public void PostSql_Update_ShouldBeOk()
+        public void SaleSql_Update_ShouldBeOk()
         {
             _venda = ObjectMotherSale.GetVenda();
             _repository.Update(_venda);
@@ -51,7 +52,7 @@ namespace DonaLaura.Infra.Data.Tests.Feature.Vendas
         }
 
         [Test]
-        public void PostSql_Update_ShouldBeFail()
+        public void SaleSql_Update_ShouldBeFail()
         {
             _venda = ObjectMotherSale.GetVendasSemCliente();
             Action action = () => _repository.Update(_venda);
@@ -59,7 +60,7 @@ namespace DonaLaura.Infra.Data.Tests.Feature.Vendas
         }
 
         [Test]
-        public void PostSql_Delete_ShouldBeOk()
+        public void SaleSql_Delete_ShouldBeOk()
         {
             _venda = ObjectMotherSale.GetVenda();
             _repository.Delete(_venda);
@@ -68,7 +69,7 @@ namespace DonaLaura.Infra.Data.Tests.Feature.Vendas
         }
 
         [Test]
-        public void PostSql_GetAll_ShouldBeOk()
+        public void SaleSql_GetAll_ShouldBeOk()
         {
             IEnumerable<Venda> posts = ObjectMotherSale.GetVendas();
             foreach (var post in posts)

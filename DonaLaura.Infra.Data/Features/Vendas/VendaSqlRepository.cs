@@ -10,11 +10,60 @@ namespace DonaLaura.Infra.Data.Features.Vendas
 {
     public class VendaSqlRepository : IVendaRepository
     {
-        private string _sqlAdd = "insert into TBVenda(ProdutoId,Cliente,Quantidade,Lucro) values (@ProdutoId, @Cliente, @Quantidade. @Lucro)";
-        private string _sqlUpdate = "update TBVenda set ProdutoId = @ProdutoId, Cliente = @Cliente, Quantidade = @Quantidade, Lucro = @Lucro where Id = @Id";
-        private string _sqlGetById = "select *from TBVenda where Id = @Id";
-        private string _sqlDelete = "delete from TBVenda where Id = @Id";
-        private string _sqlGetAll = "select * from TBVenda";
+        private string _sqlAdd = 
+            @"INSERT INTO TBVenda
+                           (ProdutoId,
+                            Cliente,
+                            Quantidade,
+                            Lucro) 
+                            VALUES 
+                            (@ProdutoId, 
+                            @Cliente, 
+                            @Quantidade, 
+                            @Lucro)";
+
+        private string _sqlUpdate =
+            @"update TBVenda SET 
+                            ProdutoId = @ProdutoId, 
+                            Cliente = @Cliente, 
+                            Quantidade = @Quantidade, 
+                            Lucro = @Lucro 
+                            where Id = @Id";
+
+        private string _sqlGetById = @"SELECT 
+                            TBVenda.Id,
+                            TBVenda.ProdutoId,
+                            TBVenda.Cliente,
+                            TBVenda.Quantidade,     
+                            TBVenda.Lucro,
+                            TBProduto.Nome, 
+                            TBProduto.PrecoVenda, 
+                            TBProduto.PrecoCusto, 
+                            TBProduto.Disponibilidade, 
+                            TBProduto.DataFabricacao, 
+                            TBProduto.DataValidade
+                        FROM
+                            TBVenda
+                        INNER JOIN TBProduto ON TBVenda.ProdutoId = TBProduto.Id
+                        WHERE TBVenda.Id = TBVenda.Id";
+
+        private string _sqlDelete = @"delete from TBVenda where Id = Id";
+
+        private string _sqlGetAll = @"SELECT 
+                                    TBVenda.Id,
+                                    TBVenda.ProdutoId,
+                                    TBVenda.Cliente,
+                                    TBVenda.Quantidade,     
+                                    TBVenda.Lucro,
+                                    TBProduto.Nome, 
+                                    TBProduto.PrecoVenda, 
+                                    TBProduto.PrecoCusto, 
+                                    TBProduto.Disponibilidade, 
+                                    TBProduto.DataFabricacao, 
+                                    TBProduto.DataValidade
+                                FROM
+                                    TBVenda
+                                INNER JOIN TBProduto ON TBVenda.ProdutoId = TBVenda.Id";
 
         public Venda Save(Venda venda)
         {

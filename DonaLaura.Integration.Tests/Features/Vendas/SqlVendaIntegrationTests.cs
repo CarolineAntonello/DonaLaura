@@ -20,23 +20,24 @@ namespace DonaLaura.Integration.Tests.Features.Vendas
         [SetUp]
         public void Initilaze()
         {
-            VendaSqlTest.SeedDatabase();
+            BaseSqlTest.SeedDeleteDatabase();
+            BaseSqlTest.SeedInsertDatabase();
             _repository = new VendaSqlRepository();
             _service = new VendaService(_repository);
         }
 
         [Test]
-        public void Integration_AddPost_ShouldBeOK()
+        public void Integration_AddSale_ShouldBeOK()
         {
             Venda venda = ObjectMotherSale.GetVenda();
             Venda vendaReceived = _service.Add(venda);
             var vendaVerify = _service.Get(venda.Id);
             vendaVerify.Should().NotBeNull();
-            vendaVerify.Id.Should().Be(venda.Id);
+            vendaVerify.Id.Should().Be(1);
         }
 
         [Test]
-        public void Integration_AddPost_ShouldBeFail()
+        public void Integration_AddSale_ShouldBeFail()
         {
             Venda venda = ObjectMotherSale.GetVendasSemCliente();
             Action action = () => _service.Add(venda);
@@ -44,7 +45,7 @@ namespace DonaLaura.Integration.Tests.Features.Vendas
         }
 
         [Test]
-        public void Integration_UpdatePost_ShouldBeOK()
+        public void Integration_UpdateSale_ShouldBeOK()
         {
             Venda venda = ObjectMotherSale.GetVenda();
             _service.Update(venda);
@@ -53,7 +54,7 @@ namespace DonaLaura.Integration.Tests.Features.Vendas
         }
 
         [Test]
-        public void Integration_UpdatePost_ShouldBeFail()
+        public void Integration_UpdateSale_ShouldBeFail()
         {
             Venda venda = ObjectMotherSale.GetVendasSemCliente();
             Action action = () => _service.Add(venda);
@@ -61,7 +62,7 @@ namespace DonaLaura.Integration.Tests.Features.Vendas
         }
 
         [Test]
-        public void Integration_DeletePost_ShouldBeOK()
+        public void Integration_DeleteSale_ShouldBeOK()
         {
             Venda venda = ObjectMotherSale.GetVenda();
             _service.Delete(venda);
@@ -70,7 +71,7 @@ namespace DonaLaura.Integration.Tests.Features.Vendas
         }
 
         [Test]
-        public void Integration_GetPost_ShouldBeOK()
+        public void Integration_GetSale_ShouldBeOK()
         {
             Venda venda = _service.Get(1);
             venda.Should().NotBeNull();
@@ -78,14 +79,14 @@ namespace DonaLaura.Integration.Tests.Features.Vendas
         }
 
         [Test]
-        public void Integration_GetPost_ShouldBeFail()
+        public void Integration_GetSale_ShouldBeFail()
         {
             Venda venda = _service.Get(2);
             venda.Should().BeNull();
         }
 
         [Test]
-        public void Integration_GetAllPost_ShouldBeOkay()
+        public void Integration_GetAllSale_ShouldBeOkay()
         {
             IEnumerable<Venda> venda = _service.GetAll();
             venda.Count().Should().BeGreaterThan(0);

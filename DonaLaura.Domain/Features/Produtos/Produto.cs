@@ -12,7 +12,7 @@ namespace DonaLaura.Domain.Features.Produtos
         public string Nome;
         public double PrecoVenda;
         public double PrecoCusto;
-        public bool Diponibilidade;
+        public bool Disponibilidade;
         public DateTime DataFabricacao;
         public DateTime DataValidade;
 

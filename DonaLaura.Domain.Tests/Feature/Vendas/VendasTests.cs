@@ -41,7 +41,7 @@ namespace DonaLaura.Domain.Tests.Feature.Vendas
         public void Domain_Venda_Produto_Invalido()
         {
             _venda.ProdutoId = _produto.Id;
-            _venda.ProdutoId = Convert.ToInt32(_produto.Diponibilidade = false);
+            _venda.ProdutoId = Convert.ToInt32(_produto.Disponibilidade = false);
             _venda.Cliente = "Vinícius";
             _venda.Quantidade = 1;
             //_venda.ProdutoId = Convert.ToInt32(_produto.DataFabricacao = DateTime.Now.AddDays(-10));
@@ -52,7 +52,7 @@ namespace DonaLaura.Domain.Tests.Feature.Vendas
         public void Domain_Venda_Realizada_Com_Sucesso()
         {
             _venda.ProdutoId = 12;
-            _venda.ProdutoId = Convert.ToInt32(_produto.Diponibilidade = true);
+            _venda.ProdutoId = Convert.ToInt32(_produto.Disponibilidade = true);
             //_venda.ProdutoId = Convert.ToInt32(_produto.DataValidade = DateTime.Now.AddDays(10));
             _venda.Cliente = "Vinícius";
             _venda.Quantidade = 1;

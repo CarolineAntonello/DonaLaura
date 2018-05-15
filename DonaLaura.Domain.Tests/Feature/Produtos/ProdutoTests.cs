@@ -67,7 +67,7 @@ namespace DonaLaura.Domain.Tests.Feature.Produtos
             _produto.Nome = "Mouse";
             _produto.PrecoCusto = 30;
             _produto.PrecoVenda = 55;
-            _produto.Diponibilidade = true;
+            _produto.Disponibilidade = true;
             _produto.DataFabricacao = DateTime.Now.AddDays(-5);
             _produto.DataValidade = DateTime.Now.AddMonths(10);
             Assert.DoesNotThrow(_produto.Validacao);
