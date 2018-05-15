@@ -81,7 +81,7 @@ namespace DonaLaura.Integration.Tests.Features.Vendas
         [Test]
         public void Integration_GetSale_ShouldBeFail()
         {
-            Venda venda = _service.Get(2);
+             Venda venda = _service.Get(2);
             venda.Should().BeNull();
         }
 

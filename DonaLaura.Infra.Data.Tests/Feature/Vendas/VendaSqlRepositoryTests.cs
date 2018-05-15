@@ -77,7 +77,7 @@ namespace DonaLaura.Infra.Data.Tests.Feature.Vendas
                 _repository.Save(post);
             }
             IEnumerable<Venda> p = _repository.GetAll();
-            p.Count().Should().Be(3);
+            p.Count().Should().Be(1);
         }
     }
 }

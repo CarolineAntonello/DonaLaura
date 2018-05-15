@@ -60,22 +60,22 @@ namespace DonaLaura.Common.Tests.Features.Vendas
                     Quantidade = 1,
                     Lucro = 15,
                 },
-                new Venda()
-                {
-                    Id = 2,
-                    ProdutoId = 2,
-                    Cliente = "Xivits",
-                    Quantidade = 1,
-                    Lucro = 15,
-                },
-                new Venda()
-                {
-                    Id = 3,
-                    ProdutoId = 2,
-                    Cliente = "Carol",
-                    Quantidade = 1,
-                    Lucro = 15,
-                }
+                //new Venda()
+                //{
+                //    Id = 2,
+                //    ProdutoId = 2,
+                //    Cliente = "Xivits",
+                //    Quantidade = 1,
+                //    Lucro = 15,
+                //},
+                //new Venda()
+                //{
+                //    Id = 3,
+                //    ProdutoId = 2,
+                //    Cliente = "Carol",
+                //    Quantidade = 1,
+                //    Lucro = 15,
+                //}
             };
             return venda;
         }
